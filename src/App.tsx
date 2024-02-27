@@ -78,14 +78,26 @@ const App: React.FC = () => {
   return (
     <>
       <AppRoutes />
-      <div className="timer-buttons-container" data-testId="app-container">
+      <div
+        className="timer-buttons-container"
+        data-testId="app-container"
+        aria-labelledby="appHeading"
+      >
         {/* Question 5 */}
-        <Link to="/react-timer">
-          <Button text={t('React Timer')} className="react-timer" />
+        <Link to="/react-timer" aria-label={t('Navigate to React Timer')}>
+          <Button
+            text={t('React Timer')}
+            className="react-timer"
+            aria-label={`React Timer ${t('button')}`}
+          />
         </Link>
         {/* Questoin 6 */}
-        <Link to="/mouse-timer">
-          <Button text={t('Mouse Timer')} className="mouse-timer" />
+        <Link to="/mouse-timer" aria-label={t('Navigate to Mouse Timer')}>
+          <Button
+            text={t('Mouse Timer')}
+            className="mouse-timer"
+            aria-label={`Mouse Timer ${t('button')}`}
+          />
         </Link>
       </div>
     </>
