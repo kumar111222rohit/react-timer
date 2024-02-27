@@ -1,0 +1,3 @@
+export const HALF_SECONDS_IN_MILLIS = 500;
+export const ONE_SECOND_IN_MILLIS = 1000;
+export const TWO_SECONDS_IN_MILLIS = 2000;
