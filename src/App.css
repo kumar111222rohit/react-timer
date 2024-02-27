@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.timer-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.mouse-timer {
+  background-color: #61dafb;
+}
+.react-timer {
+  background-color: lightseagreen;
+  color: #fff;
+  font-weight: 600;
+}
