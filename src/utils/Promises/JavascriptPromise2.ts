@@ -1,4 +1,4 @@
-import { ArgType } from "../../types/baseTypes";
+import { ArgType } from '../../types/baseTypes';
 
 async function helloWorld(arg?: ArgType) {
   if (arg === true) {
