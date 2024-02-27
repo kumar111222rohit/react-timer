@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Getting Started with plek-assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
 
-## Available Scripts
+` Node version: v18.14.2`
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+Install the dependencies
+`npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run the application
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm run start`
 
-### `npm test`
+The application should start on `http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing
 
-### `npm run build`
+To run the test suite
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`npm run test`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It will also create the coverage report in the `/coverage` folder
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Linting
 
-### `npm run eject`
+To run a lint check
+`npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run a lint fix
+`npm run lint:fix`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prettier
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run a prettier check
+`npm run prettier-check`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To run a prettier fix
+`npm run prettier-write`
 
-## Learn More
+## Solution Guide
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 1. The output of Question 1 and Question 2 can be seen in the browser console upon starting the application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 2. The answer to Question 3 and Question 4 is in the file
+
+`src/utils/ReactContext/ReactContext.txt`
+
+#### 3. The output of Question 5 and Question 6 can directly be seen on the browser.Upon click of each button the relevant component is rendered.
+
+### Contributors
+
+[Rohit kumar](https://github.com/kumar111222rohit)
+
+## License
+
+`MIT License`
