@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import './App.css';
 import { withTimeout } from './utils/Promises/JavascriptPromise1';
@@ -15,6 +16,8 @@ import {
 } from './constants/constants';
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
+
   React.useEffect(() => {
     // Question 1
     async function fetchData(): Promise<string> {
@@ -78,11 +81,11 @@ const App: React.FC = () => {
       <div className="timer-buttons-container" data-testId="app-container">
         {/* Question 5 */}
         <Link to="/react-timer">
-          <Button text="React Timer" className="react-timer" />
+          <Button text={t('React Timer')} className="react-timer" />
         </Link>
         {/* Questoin 6 */}
         <Link to="/mouse-timer">
-          <Button text="Mouse Timer" className="mouse-timer" />
+          <Button text={t('Mouse Timer')} className="mouse-timer" />
         </Link>
       </div>
     </>

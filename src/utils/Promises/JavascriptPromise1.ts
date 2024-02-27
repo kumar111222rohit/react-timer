@@ -1,4 +1,4 @@
- function withTimeout<T>(
+function withTimeout<T>(
   fn: () => Promise<T>,
   timeoutMillis: number
 ): () => Promise<T> {
@@ -21,4 +21,4 @@
   };
 }
 
-export {withTimeout};
+export { withTimeout };

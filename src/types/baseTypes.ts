@@ -1,1 +1,1 @@
-export type ArgType= boolean;
+export type ArgType = boolean;
