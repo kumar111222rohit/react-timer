@@ -1,26 +1,92 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link } from 'react-router-dom';
 
-function App() {
+import './App.css';
+import { withTimeout } from './utils/Promises/JavascriptPromise1';
+import helloWorld from './utils/Promises/JavascriptPromise2';
+import AppRoutes from './routes/Routes';
+import Button from './components/Button';
+import reportWebVitals from './reportWebVitals';
+
+import {
+  HALF_SECONDS_IN_MILLIS,
+  ONE_SECOND_IN_MILLIS,
+  TWO_SECONDS_IN_MILLIS,
+} from './constants/constants';
+
+const App: React.FC = () => {
+  React.useEffect(() => {
+    // Question 1
+    async function fetchData(): Promise<string> {
+      return new Promise(resolve =>
+        setTimeout(
+          () => resolve('Promise resolved for fetchData'),
+          HALF_SECONDS_IN_MILLIS
+        )
+      );
+    }
+    async function fetchDataTimeOut(): Promise<string> {
+      return new Promise(resolve =>
+        setTimeout(
+          () => resolve('Promise resolved fetchDataTimeOut'),
+          TWO_SECONDS_IN_MILLIS
+        )
+      );
+    }
+
+    try {
+      const fetchDataWithTimeout = withTimeout(fetchData, ONE_SECOND_IN_MILLIS);
+      fetchDataWithTimeout().then(console.log).catch(console.error);
+    } catch (err) {
+      console.log(err);
+    }
+
+    try {
+      const fetchDataWithTimeoutNotResolved = withTimeout(
+        fetchDataTimeOut,
+        1000
+      );
+      fetchDataWithTimeoutNotResolved().then(console.log).catch(console.error);
+    } catch (err) {
+      console.log(err);
+    }
+
+    //Question 2
+    const helloWorldResult = async () => {
+      try {
+        const resultForTrueArg = await helloWorld(true);
+        console.log(resultForTrueArg);
+
+        const resultForFalseArg = await helloWorld(false);
+        console.log(resultForFalseArg);
+
+        const resultForNoArg = await helloWorld();
+        console.log(resultForNoArg);
+      } catch (error) {
+        console.error('rejected with error: ' + error);
+      }
+    };
+    console.log(helloWorldResult());
+
+    // reporting web vitals, can also send this to analytics
+    reportWebVitals(console.log);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppRoutes />
+      <div className="timer-buttons-container" data-testId="app-container">
+        {/* Question 5 */}
+        <Link to="/react-timer">
+          <Button text="React Timer" className="react-timer" />
+        </Link>
+        {/* Questoin 6 */}
+        <Link to="/mouse-timer">
+          <Button text="Mouse Timer" className="mouse-timer" />
+        </Link>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
