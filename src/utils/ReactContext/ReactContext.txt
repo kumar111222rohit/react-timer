@@ -1,0 +1,31 @@
+ 1. Which of the following code snippets demonstrates the correct way to optimize renders when
+ passing context values in React?
+
+ a) <MyContext.Provider value={value}>{children}</MyContext.Provider>
+
+ b) <MyContext.Provider value={useMemo(() => value,
+ [value])}>{children}</MyContext.Provider>
+
+ c) <MyContext.Provider value={useMemo(() => value,
+[])}>{children}</MyContext.Provider>
+
+ d) <MyContext.Provider value={value}>{useMemo(() => children,
+ [children])}</MyContext.Provider>
+
+e) <MyContext.Provider value={useMemo(() => value,
+[children])}>{children}</MyContext.Provider>
+
+f) <MyContext.Provider value={value}>{useMemo(() => children,
+[])}</MyContext.Provider>
+
+
+Answer:
+ Option b:  <MyContext.Provider value={useMemo(() => value,
+ [value])}>{children}</MyContext.Provider>
+
+2. What happens if the value in the above question is an object with a firstName and givenName
+property?
+
+Answer:
+ Option b:  <MyContext.Provider value={useMemo(() => value,
+ [value])}>{children}</MyContext.Provider>
