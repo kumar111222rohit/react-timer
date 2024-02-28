@@ -1,4 +1,4 @@
-# Getting Started with plek-assignment
+# Getting Started with React Timer
 
 ## Prerequisites
 
