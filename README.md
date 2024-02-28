@@ -1,5 +1,11 @@
 # Getting Started with React Timer
 
+
+This application showcases two things:
+
+1. A react component showing current time and changing color based on divisibility by 3, 5 or 15 .
+2. A real time indicator of how long the user has been moving the cursor across the page. The timer increases if the movement is in top50% and decreases if mouse movement is in bottom 50%.
+   
 ## Prerequisites
 
 ` Node version: v18.14.2`
